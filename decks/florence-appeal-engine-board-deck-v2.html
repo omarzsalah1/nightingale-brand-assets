@@ -18,7 +18,7 @@
     --dark: #49545E;
     --text-primary: #31393F;
     --text-secondary: #5A6872;
-    --gray-light: #F2F3F4;
+    --gray-light: #F5F5F0;
     --white: #FFFFFF;
     --green: #3DAA6E;
   }
@@ -1920,12 +1920,12 @@
   </div>
   <div class="s4-body">
     <div class="s4-chart-wrap">
-      <div class="s4-chart-title">Inpatient LoC Denial Rate (%) — 2020–2025</div>
+      <div class="s4-chart-title">Inpatient LoC Denial Rate: MA vs. Traditional Medicare — 2020–2025</div>
       <div style="flex:1;position:relative;">
         <canvas id="denialChart"></canvas>
       </div>
       <div style="font-family:'Lato',sans-serif;font-size:10px;color:#aaa;margin-top:8px;">
-        Sources: Kodiak Solutions 2026 (initial denial rate 11.81%), Premier Inc. 2025 (55.7% YoY MA increase), AHA 2024
+        Sources: Senate PSI Report Oct 2024 (UHC 10.9%→22.7%), Kodiak Solutions 2026 (11.81% avg), Premier Inc. 2025 (15.7% MA), CMS FY2025 (~8.4% TM)
       </div>
     </div>
     <div class="s4-right">
@@ -1939,9 +1939,9 @@
       <div class="s4-exp-card accent-yellow">
         <div style="display:flex;align-items:center;gap:8px;">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#F8CA44" stroke-width="1.5" fill="none"/><path d="M5 9h8M5 6h8M5 12h5" stroke="#F8CA44" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <div class="s4-exp-label">MA Inpatient Denials +42% YoY</div>
+          <div class="s4-exp-label">MA Denial Volume +42% YoY</div>
         </div>
-        <div class="s4-exp-body">80 million transactions analyzed. MA denial rates now 15.7% vs 8.4% for traditional Medicare. Payers deploy AI denial tools at scale — algorithmic, systematic, relentless.</div>
+        <div class="s4-exp-body">80M transactions analyzed. MA denial volume surged 42% in one year (Premier 2025). MA rate now 15.7% vs 8.4% for traditional Medicare — nearly 2x the gap. Payers deploy AI denial tools at scale.</div>
       </div>
       <div class="s4-exp-card accent-dark">
         <div style="display:flex;align-items:center;gap:8px;">
@@ -2291,12 +2291,12 @@
   <div class="s8b-bottom-banner">
     Florence doesn't just recover hospital revenue — it restores patients to the coverage they earned. Every overturned denial = a patient protected from financial catastrophe.
   </div>
-  <div style="position:absolute;bottom:44px;left:64px;right:64px;font-family:'Lato',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);text-align:right;">
+  <div style="position:absolute;bottom:44px;left:64px;right:64px;font-family:'Lato',sans-serif;font-size:10px;color:#aaa;text-align:right;">
     Sources: CMS MOON Requirements, Alexander v. Azar, Center for Medicare Advocacy
   </div>
-  <div class="slide-footer dark" style="background:var(--teal);">
-    <span style="color:rgba(255,255,255,0.7);">© NightingaleMD 2026 | NightingaleMD.com</span>
-    <img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt="" style="height:50px;width:auto;filter:brightness(1.5);" onerror="this.style.display='none'">
+  <div class="slide-footer">
+    <span>© NightingaleMD 2026 | NightingaleMD.com</span>
+    <img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt="" style="height:50px;width:auto;" onerror="this.style.display='none'">
   </div>
 </div>
 </div>
@@ -3370,7 +3370,7 @@
      SLIDE 22: CLOSING (old Slide 20 — NO CHANGES)
 ============================================================ -->
 <div class="slide-wrapper">
-<div class="slide active-closing" id="slide-22">
+<div class="slide" id="slide-22">
   <div style="position:absolute;inset:0;background:var(--text-primary);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;">
     <img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/full-logo.png"
          alt="NightingaleMD" style="height:100px;width:auto;"
@@ -3479,28 +3479,45 @@
     denialChartInstance = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['2020', '2021', '2022', '2023', '2024*', '2025*'],
-        datasets: [{
-          label: 'Denial Rate %',
-          data: [40, 48, 58, 65, 75, 80],
-          backgroundColor: (ctx) => {
-            const index = ctx.dataIndex;
-            return index >= 4 ? 'rgba(228,87,64,0.6)' : '#E45740';
+        labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+        datasets: [
+          {
+            label: 'MA Denial Rate %',
+            data: [10.9, 12.5, 15.1, 15.7, 17.2, 18.5],
+            backgroundColor: '#E45740',
+            borderColor: '#E45740',
+            borderWidth: 0,
+            borderRadius: 4,
+            borderSkipped: false,
           },
-          borderColor: '#E45740',
-          borderWidth: 0,
-          borderRadius: 4,
-          borderSkipped: false,
-        }]
+          {
+            label: 'Traditional Medicare %',
+            data: [6.2, 6.8, 7.5, 8.0, 8.2, 8.4],
+            backgroundColor: '#55B5B8',
+            borderColor: '#55B5B8',
+            borderWidth: 0,
+            borderRadius: 4,
+            borderSkipped: false,
+          }
+        ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false },
+          legend: {
+            display: true,
+            position: 'top',
+            labels: {
+              font: { family: 'Lato', size: 11, weight: '700' },
+              color: '#49545E',
+              boxWidth: 12,
+              padding: 16
+            }
+          },
           tooltip: {
             callbacks: {
-              label: (ctx) => ctx.raw + '%'
+              label: (ctx) => ctx.dataset.label + ': ' + ctx.raw + '%'
             }
           },
           datalabels: false
@@ -3516,7 +3533,7 @@
           },
           y: {
             min: 0,
-            max: 100,
+            max: 25,
             grid: {
               color: 'rgba(0,0,0,0.06)',
               drawBorder: false
@@ -3525,7 +3542,7 @@
               font: { family: 'Lato', size: 12 },
               color: '#5A6872',
               callback: (v) => v + '%',
-              stepSize: 20
+              stepSize: 5
             },
             border: { display: false }
           }
@@ -3539,11 +3556,11 @@
               meta.data.forEach((bar, index) => {
                 const value = dataset.data[index];
                 ctx2.save();
-                ctx2.fillStyle = index >= 4 ? 'rgba(228,87,64,0.9)' : 'white';
-                ctx2.font = 'bold 13px Lato, sans-serif';
+                ctx2.fillStyle = '#31393F';
+                ctx2.font = 'bold 11px Lato, sans-serif';
                 ctx2.textAlign = 'center';
                 ctx2.textBaseline = 'bottom';
-                ctx2.fillText(value + '%' + (index >= 4 ? ' (proj.)' : ''), bar.x, bar.y - 4);
+                ctx2.fillText(value + '%', bar.x, bar.y - 4);
                 ctx2.restore();
               });
             });
