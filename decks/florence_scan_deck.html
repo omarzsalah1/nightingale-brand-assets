@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florence for SCAN Health Plan — AI-Powered Care Coordination</title>
+<!-- deck_type: sales-deck -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@300;400;600;700&display=swap');
+  :root {
+    --teal: #55B5B8; --red: #E45740; --yellow: #F8CA44;
+    --dark: #49545E; --light: #F2F3F4; --dark-bg: #2C3640;
+    --text-primary: #31393F; --text-secondary: #5A6872;
+    --green: #2ECC71; --teal-dark: #3A8F91;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Lato', sans-serif; background: #111; color: var(--text-primary); }
+  .slide {
+    width: 1280px; height: 720px; margin: 40px auto; position: relative;
+    overflow: hidden; background: #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  h1 { font-family: 'Merriweather', serif; font-weight: 700; }
+  h2 { font-family: 'Merriweather', serif; font-weight: 700; font-size: 32px; color: var(--text-primary); }
+  h3 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 18px; }
+  .subtitle { font-size: 16px; color: var(--text-secondary); font-style: italic; margin-top: 4px; }
+  .accent-left { position: absolute; left: 0; top: 0; width: 6px; height: 100%; background: var(--teal); }
+  .accent-top { position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--teal); }
+  .footer {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 40px;
+    background: var(--dark); display: flex; align-items: center; padding: 0 24px;
+  }
+  .footer img { height: 22px; margin-right: 12px; }
+  .footer span { font-size: 11px; color: #aaa; }
+  .card {
+    background: var(--light); border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: relative; overflow: hidden;
+  }
+  .card-accent { position: absolute; top: 0; left: 0; width: 100%; height: 5px; }
+  .card-accent-left { position: absolute; top: 0; left: 0; width: 5px; height: 100%; }
+  .stat-number { font-family: 'Merriweather', serif; font-weight: 700; font-size: 42px; }
+  .teal-bar { background: var(--teal); color: #fff; padding: 12px 24px; text-align: center; font-weight: 700; font-size: 15px; }
+  .quote-box {
+    background: #EDF7F7; border-left: 5px solid var(--teal); padding: 16px 20px;
+    border-radius: 4px; margin: 0 64px;
+  }
+  .quote-box em { color: var(--text-primary); font-size: 14px; }
+  .quote-box .attribution { font-size: 11px; color: #999; margin-top: 6px; }
+  ul.clean { list-style: none; padding: 0; }
+  ul.clean li { padding: 4px 0 4px 20px; position: relative; font-size: 13px; color: #666; }
+  ul.clean li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+  .pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 10px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════ SLIDE 1: TITLE ══════════════════════════════════════ -->
+<div class="slide" style="background: var(--dark-bg);">
+  <div class="accent-top"></div>
+  <div style="padding: 64px;">
+    <img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/full-logo.png" alt="NightingaleMD" style="height: 48px; margin-bottom: 32px;">
+    <h1 style="color: #fff; font-size: 44px; line-height: 1.2;">Florence for SCAN Health Plan</h1>
+    <p style="color: var(--teal); font-size: 20px; margin-top: 12px; font-weight: 300;">AI-Powered Care Coordination for Medicare Advantage</p>
+    <div style="width: 200px; height: 3px; background: var(--teal); margin: 28px 0;"></div>
+    <div style="color: #ccc; font-size: 13px; line-height: 1.8;">
+      <span style="color: #999; font-size: 11px; font-weight: 700; letter-spacing: 1px;">PRESENTED TO</span><br>
+      CJ — Director, Product Development &amp; Strategy<br>
+      Jenny — Clinical Strategy Program Manager<br>
+      Aman Bhandari — Chief AI Officer<br>
+      Joe Kimura, MD — Chief Medical Officer
+    </div>
+    <p style="color: #777; font-size: 11px; position: absolute; bottom: 24px; left: 64px;">April 2026 &nbsp;|&nbsp; Confidential</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 2: THE MA CHALLENGE ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>The Medicare Advantage Challenge</h2>
+    <p class="subtitle">SCAN is growing fast — but complexity is growing faster</p>
+    <div style="display: flex; gap: 20px; margin-top: 28px;">
+      <div class="card" style="flex: 1; padding: 24px; text-align: center;">
+        <div class="card-accent" style="background: var(--teal);"></div>
+        <div class="stat-number" style="color: var(--teal); margin-top: 8px;">440K</div>
+        <div style="font-weight: 700; font-size: 13px; margin-top: 4px;">Members</div>
+        <div style="font-size: 11px; color: #999; margin-top: 4px;">40.6% YoY growth</div>
+      </div>
+      <div class="card" style="flex: 1; padding: 24px; text-align: center;">
+        <div class="card-accent" style="background: var(--red);"></div>
+        <div class="stat-number" style="color: var(--red); margin-top: 8px;">20+</div>
+        <div style="font-weight: 700; font-size: 13px; margin-top: 4px;">HEDIS/Star Measures</div>
+        <div style="font-size: 11px; color: #999; margin-top: 4px;">Annual gap closure targets</div>
+      </div>
+      <div class="card" style="flex: 1; padding: 24px; text-align: center;">
+        <div class="card-accent" style="background: var(--yellow);"></div>
+        <div class="stat-number" style="color: #D4A017; margin-top: 8px;">127K</div>
+        <div style="font-weight: 700; font-size: 13px; margin-top: 4px;">New Members</div>
+        <div style="font-size: 11px; color: #999; margin-top: 4px;">Enrolled in the last year alone</div>
+      </div>
+      <div class="card" style="flex: 1; padding: 24px; text-align: center;">
+        <div class="card-accent" style="background: var(--teal-dark);"></div>
+        <div class="stat-number" style="color: var(--teal-dark); margin-top: 8px;">30+</div>
+        <div style="font-weight: 700; font-size: 13px; margin-top: 4px;">Delegated IPAs</div>
+        <div style="font-size: 11px; color: #999; margin-top: 4px;">Coordination complexity</div>
+      </div>
+    </div>
+    <div class="quote-box" style="margin-top: 28px;">
+      <em>"Your care management team is actively looking for an AI tool to manage the whole care management pathway."</em>
+      <div class="attribution">— Validated on April 16 call with SCAN leadership</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 3: FLORENCE OVERVIEW ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Florence: Your AI Care Coordinator</h2>
+    <p class="subtitle">Florence augments care managers — she never replaces them</p>
+    <div style="display: flex; gap: 20px; margin-top: 24px;">
+      <div class="card" style="flex: 1; padding: 24px; text-align: center;">
+        <div class="card-accent" style="background: var(--teal);"></div>
+        <div style="font-size: 40px; margin: 12px 0;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3>Automated Outreach</h3>
+        <p style="font-size: 12px; color: #666; margin-top: 8px;">AI-powered voice, SMS &amp; chat in 50+ languages. 24/7 member engagement at scale.</p>
+      </div>
+      <div class="card" style="flex: 1; padding: 24px; text-align: center;">
+        <div class="card-accent" style="background: var(--teal);"></div>
+        <div style="font-size: 40px; margin: 12px 0;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Household Coordination</h3>
+        <p style="font-size: 12px; color: #666; margin-top: 8px;">One call, one household. Multiple gaps closed per interaction. Family-centered care.</p>
+      </div>
+      <div class="card" style="flex: 1; padding: 24px; text-align: center;">
+        <div class="card-accent" style="background: var(--teal);"></div>
+        <div style="font-size: 40px; margin: 12px 0;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h4M7 11h2"/><circle cx="17" cy="9.5" r="2.5"/></svg>
+        </div>
+        <h3>Care Manager Augmentation</h3>
+        <p style="font-size: 12px; color: #666; margin-top: 8px;">Real-time scribe, co-pilot, auto-documentation. Works inside MedHOK.</p>
+      </div>
+    </div>
+    <div class="teal-bar" style="margin-top: 28px; border-radius: 4px;">
+      Works INSIDE MedHOK — your platform of record. Zero new logins. Zero disruption.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 4: FLORENCE INSIDE MEDHOK ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Florence Inside MedHOK</h2>
+    <p class="subtitle">Agentic browser automation — zero API dependency</p>
+    <div style="display: flex; gap: 24px; margin-top: 24px;">
+      <!-- MedHOK Window -->
+      <div style="flex: 1; background: #1A2332; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+        <div style="background: #111927; padding: 8px 16px; display: flex; align-items: center; gap: 8px;">
+          <div style="display: flex; gap: 4px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #ff5f57;"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #febc2e;"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #28c840;"></span></div>
+          <span style="color: #8899aa; font-size: 11px; margin-left: 8px;">MHK CareProminence</span>
+        </div>
+        <div style="background: #f8f9fa; padding: 16px; margin: 8px; border-radius: 4px; font-size: 12px;">
+          <div style="font-weight: 700; color: var(--text-primary);">Maria Garcia, 78</div>
+          <div style="color: #888; font-size: 10px;">MBI: 1EG4-TE5-MK72 &nbsp;|&nbsp; IPA: MemorialCare</div>
+          <div style="margin-top: 10px; display: flex; gap: 12px; font-size: 10px; color: var(--teal); font-weight: 600;">
+            <span>Care Plan</span><span>Assessments</span><span>Tasks</span><span style="border-bottom: 2px solid var(--teal);">Notes</span>
+          </div>
+          <hr style="border: none; border-top: 1px solid #eee; margin: 8px 0;">
+          <div style="color: var(--red); font-size: 11px;">Open Gaps: AWV, Colorectal, Fall Risk</div>
+          <div style="color: #666; font-size: 11px; margin-top: 4px;">Last Contact: 03/15/2026 — Phone</div>
+          <div style="color: #D4A017; font-size: 11px; margin-top: 4px;">Risk Score: Rising Risk (3.2)</div>
+          <div style="color: var(--teal); font-size: 11px; margin-top: 4px;">Next Task: TCM follow-up due 04/18</div>
+        </div>
+      </div>
+      <!-- Florence Sidebar -->
+      <div style="flex: 1; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); border: 2px solid var(--teal);">
+        <div style="background: var(--teal); padding: 10px 16px; display: flex; align-items: center; gap: 8px;">
+          <img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt="" style="height: 22px;">
+          <span style="color: #fff; font-weight: 700; font-size: 13px;">Florence AI Assistant</span>
+        </div>
+        <div style="padding: 16px; font-size: 12px;">
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div><strong style="color: var(--text-primary);">Auto-Documentation</strong><br><span style="color: #888; font-size: 10px;">SOAP notes filed to MedHOK Notes tab</span></div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div><strong style="color: var(--text-primary);">Task Queue Sync</strong><br><span style="color: #888; font-size: 10px;">New tasks auto-created in MedHOK workflow</span></div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div><strong style="color: var(--text-primary);">Care Plan Updates</strong><br><span style="color: #888; font-size: 10px;">Findings pushed to active care plans</span></div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div><strong style="color: var(--text-primary);">Live Transcript</strong><br><span style="color: #888; font-size: 10px;">Real-time call intelligence visible to CM</span></div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div><strong style="color: var(--text-primary);">Phone Tag Eliminated</strong><br><span style="color: #888; font-size: 10px;">3-way calls, auto-scheduling, instant PCP notify</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 5: HEDIS GAP CLOSURE ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>HEDIS/Star Gap Closure Workflow</h2>
+    <div style="display: flex; gap: 8px; margin-top: 28px; align-items: center;">
+      <div style="flex: 1; background: var(--light); padding: 16px; border-radius: 4px; text-align: center; border-top: 4px solid var(--teal);">
+        <div style="font-weight: 700; font-size: 13px;">Identify<br>Gaps</div>
+        <div style="font-size: 10px; color: #999; margin-top: 4px;">KenSci + Databricks</div>
+      </div>
+      <div style="font-size: 24px; color: var(--teal);">→</div>
+      <div style="flex: 1; background: var(--light); padding: 16px; border-radius: 4px; text-align: center; border-top: 4px solid var(--teal);">
+        <div style="font-weight: 700; font-size: 13px;">Configure<br>Campaign</div>
+        <div style="font-size: 10px; color: #999; margin-top: 4px;">SCAN-controlled rules</div>
+      </div>
+      <div style="font-size: 24px; color: var(--teal);">→</div>
+      <div style="flex: 1; background: var(--light); padding: 16px; border-radius: 4px; text-align: center; border-top: 4px solid var(--teal);">
+        <div style="font-weight: 700; font-size: 13px;">Digital<br>Outreach</div>
+        <div style="font-size: 10px; color: #999; margin-top: 4px;">SMS + Voice in 50+ languages</div>
+      </div>
+      <div style="font-size: 24px; color: var(--teal);">→</div>
+      <div style="flex: 1; background: var(--teal); padding: 16px; border-radius: 4px; text-align: center; color: #fff;">
+        <div style="font-weight: 700; font-size: 13px;">Florence<br>Engagement</div>
+        <div style="font-size: 10px; opacity: 0.8; margin-top: 4px;">Schedule, educate, coordinate</div>
+      </div>
+      <div style="font-size: 24px; color: var(--teal);">→</div>
+      <div style="flex: 1; background: var(--light); padding: 16px; border-radius: 4px; text-align: center; border-top: 4px solid var(--green);">
+        <div style="font-weight: 700; font-size: 13px;">Confirm &amp;<br>Document</div>
+        <div style="font-size: 10px; color: #999; margin-top: 4px;">Filed in MedHOK</div>
+      </div>
+    </div>
+    <h3 style="margin-top: 28px; color: var(--text-primary);">Medicare Advantage Measures</h3>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px;">
+      <div style="background: #EDF7F7; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600;">Annual Wellness Visit</div>
+      <div style="background: #EDF7F7; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600;">Breast Cancer Screening</div>
+      <div style="background: #EDF7F7; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600;">Colorectal Screening</div>
+      <div style="background: #EDF7F7; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600;">Diabetes Eye Exam</div>
+      <div style="background: #EDF7F7; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600;">Medication Adherence</div>
+      <div style="background: #EDF7F7; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600;">Fall Risk Assessment</div>
+      <div style="background: #EDF7F7; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 600;">Depression Screening</div>
+    </div>
+    <p style="text-align: center; font-size: 11px; color: #999; margin-top: 20px;">Data from Databricks/KenSci for targeting &nbsp;|&nbsp; Results documented in MedHOK</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 6: OUTREACH ESCALATION ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Florence Outreach Escalation</h2>
+    <p class="subtitle">Every touchpoint is SCAN-controlled and documented in MedHOK</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px;">
+      <div class="card" style="padding: 20px;"><div class="card-accent" style="background: var(--teal);"></div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span style="background: var(--teal); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">1</span>
+          <h3>Data Ingest</h3>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 8px;">KenSci risk scores + Databricks member data feed into Florence targeting engine.</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent" style="background: var(--teal);"></div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span style="background: var(--teal); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">2</span>
+          <h3>SMS Outreach</h3>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 8px;">Personalized, multilingual text messages with appointment context and scheduling links.</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent" style="background: var(--teal);"></div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span style="background: var(--teal); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">3</span>
+          <h3>Voice Call</h3>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 8px;">AI-powered conversations in 50+ languages. Natural, empathetic member engagement.</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent" style="background: var(--teal);"></div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span style="background: var(--teal); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">4</span>
+          <h3>Scheduling</h3>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 8px;">Auto-book appointments with PCP or specialist. SafeRide transportation arranged.</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent" style="background: var(--red);"></div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span style="background: var(--red); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">5</span>
+          <h3>3-Way Call</h3>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 8px;">Florence + Member + Provider office live on the line. Appointment confirmed in real time.</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent" style="background: var(--green);"></div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+          <span style="background: var(--green); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">6</span>
+          <h3>Confirm &amp; File</h3>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 8px;">SOAP note, task queue update, care plan — all auto-documented in MedHOK.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 7: BEYOND HEDIS ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Beyond HEDIS: Full Workflow Suite</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px;">
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <h3 style="margin-left: 12px;">TCM</h3>
+        <p style="font-size: 11px; color: #666; margin-top: 6px; margin-left: 12px;">Post-discharge outreach within 2 days. PCP follow-up scheduling within 7/14 days.</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <h3 style="margin-left: 12px;">Medication Reconciliation</h3>
+        <p style="font-size: 11px; color: #666; margin-top: 6px; margin-left: 12px;">Post-discharge med review, adherence tracking, refill coordination.</p>
+        <p style="font-size: 10px; color: var(--teal); font-style: italic; margin-top: 4px; margin-left: 12px;">Complements Arine</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <h3 style="margin-left: 12px;">SDOH Screening</h3>
+        <p style="font-size: 11px; color: #666; margin-top: 6px; margin-left: 12px;">Housing, food, transportation, social isolation — auto-referral to community services.</p>
+        <p style="font-size: 10px; color: var(--teal); font-style: italic; margin-top: 4px; margin-left: 12px;">Feeds Independence at Home</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <h3 style="margin-left: 12px;">Referral Management</h3>
+        <p style="font-size: 11px; color: #666; margin-top: 6px; margin-left: 12px;">Specialist referral tracking, appointment confirmation, loop closure.</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <h3 style="margin-left: 12px;">Transportation</h3>
+        <p style="font-size: 11px; color: #666; margin-top: 6px; margin-left: 12px;">Auto-schedule NEMT rides for appointments via SafeRide Health.</p>
+        <p style="font-size: 10px; color: var(--teal); font-style: italic; margin-top: 4px; margin-left: 12px;">SafeRide Health</p>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <h3 style="margin-left: 12px;">Home Visit Capture</h3>
+        <p style="font-size: 11px; color: #666; margin-top: 6px; margin-left: 12px;">Pre-visit prep, real-time scribe during home visits, post-visit documentation.</p>
+        <p style="font-size: 10px; color: var(--teal); font-style: italic; margin-top: 4px; margin-left: 12px;">Complements Dina</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 8: ONE HOUSEHOLD ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>One Household, One Call</h2>
+    <p class="subtitle">Maria (78) and Roberto (81) — married SCAN members, same household</p>
+    <div style="display: flex; gap: 24px; margin-top: 24px;">
+      <div class="card" style="flex: 1; padding: 24px;"><div class="card-accent" style="background: var(--teal);"></div>
+        <h3 style="margin-top: 8px;">Maria Garcia, 78</h3>
+        <ul class="clean" style="margin-top: 12px;">
+          <li>AWV scheduled — April 22</li>
+          <li>Colorectal screening — referred</li>
+          <li>Fall risk assessment — completed on call</li>
+          <li>SafeRide booked for AWV appointment</li>
+        </ul>
+      </div>
+      <div class="card" style="flex: 1; padding: 24px;"><div class="card-accent" style="background: var(--teal);"></div>
+        <h3 style="margin-top: 8px;">Roberto Garcia, 81</h3>
+        <ul class="clean" style="margin-top: 12px;">
+          <li>Diabetes eye exam — scheduled</li>
+          <li>Medication adherence — confirmed refills</li>
+          <li>Depression screening — completed on call</li>
+          <li>SafeRide booked for eye exam</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background: #EDF7F7; padding: 16px 24px; border-radius: 4px; margin-top: 24px; border-left: 5px solid var(--teal);">
+      <strong>Result:</strong> <span style="color: #666;">5 gaps closed, 2 rides booked, 2 screenings completed — in a single 12-minute call.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 9: COMPLEX + RISING RISK ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Complex + Rising Risk: The Full Spectrum</h2>
+    <div style="display: flex; gap: 24px; margin-top: 24px;">
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--red); color: #fff; padding: 12px 20px; font-weight: 700; text-align: center; font-size: 16px;">Complex Patients</div>
+        <div style="background: #FFF5F5; padding: 20px;">
+          <ul class="clean">
+            <li>Transitional Care Management (TCM)</li>
+            <li>Medication reconciliation post-discharge</li>
+            <li>SDOH screening &amp; referral</li>
+            <li>High-touch care coordination</li>
+            <li>Multi-morbidity management</li>
+            <li>Frequent readmission prevention</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--teal); color: #fff; padding: 12px 20px; font-weight: 700; text-align: center; font-size: 16px;">Rising Risk Populations</div>
+        <div style="background: #EDF7F7; padding: 20px;">
+          <ul class="clean">
+            <li>Proactive chronic disease management</li>
+            <li>Preventive screening campaigns</li>
+            <li>Lifestyle coaching &amp; wellness checks</li>
+            <li>Early intervention before hospitalization</li>
+            <li>Medication adherence monitoring</li>
+            <li>Social isolation outreach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="teal-bar" style="margin-top: 24px; border-radius: 4px;">
+      Florence can engage all 440,000 members simultaneously — no staffing constraint.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 10: BEFORE & AFTER ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Before &amp; After: The Care Manager's Day</h2>
+    <div style="display: flex; gap: 24px; margin-top: 24px;">
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--red); color: #fff; padding: 12px; text-align: center; font-weight: 700;">BEFORE Florence</div>
+        <div style="background: #FFF5F5; padding: 24px; text-align: center;">
+          <div style="font-family: 'Merriweather', serif; font-size: 48px; font-weight: 700; color: var(--red);">80%</div>
+          <div style="font-size: 14px; color: #888; margin-bottom: 16px;">of time on administrative tasks</div>
+          <ul class="clean" style="text-align: left;">
+            <li>Manual documentation in MedHOK</li>
+            <li>Phone tag with providers</li>
+            <li>Scheduling appointments manually</li>
+            <li>Data entry across systems</li>
+            <li>Faxing PCP notifications</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--green); color: #fff; padding: 12px; text-align: center; font-weight: 700;">AFTER Florence</div>
+        <div style="background: #F0FAF0; padding: 24px; text-align: center;">
+          <div style="font-family: 'Merriweather', serif; font-size: 48px; font-weight: 700; color: var(--green);">90%</div>
+          <div style="font-size: 14px; color: #888; margin-bottom: 16px;">of time on clinical care</div>
+          <ul class="clean" style="text-align: left;">
+            <li>Auto-documentation by Florence</li>
+            <li>3-way calls eliminate phone tag</li>
+            <li>Auto-scheduling via Florence</li>
+            <li>Single platform (MedHOK)</li>
+            <li>Instant digital PCP notifications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 11: SCRIBE & CO-PILOT ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Florence as Scribe &amp; Co-Pilot</h2>
+    <p class="subtitle">Complement Abridge (provider-patient) with Florence (care manager-member)</p>
+    <div style="margin-top: 24px;">
+      <div style="display: flex; align-items: stretch; gap: 0; margin-bottom: 12px;">
+        <div style="background: var(--teal); color: #fff; width: 48px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; border-radius: 4px 0 0 4px;">1</div>
+        <div style="background: var(--light); padding: 16px 20px; flex: 1; border-radius: 0 4px 4px 0;">
+          <strong>Real-Time Transcription</strong>
+          <p style="font-size: 12px; color: #888; margin-top: 4px;">Every word captured, timestamped, and searchable. No more handwritten notes.</p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: stretch; gap: 0; margin-bottom: 12px;">
+        <div style="background: var(--teal); color: #fff; width: 48px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; border-radius: 4px 0 0 4px;">2</div>
+        <div style="background: #fff; padding: 16px 20px; flex: 1; border-radius: 0 4px 4px 0; border: 1px solid #eee;">
+          <strong>Clinical Signal Detection</strong>
+          <p style="font-size: 12px; color: #888; margin-top: 4px;">Florence flags medication changes, fall risks, mood shifts, SDOH concerns — in real time.</p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: stretch; gap: 0; margin-bottom: 12px;">
+        <div style="background: var(--teal); color: #fff; width: 48px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; border-radius: 4px 0 0 4px;">3</div>
+        <div style="background: var(--light); padding: 16px 20px; flex: 1; border-radius: 0 4px 4px 0;">
+          <strong>SOAP Note Generation</strong>
+          <p style="font-size: 12px; color: #888; margin-top: 4px;">Structured clinical notes auto-generated and filed to MedHOK Notes tab.</p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: stretch; gap: 0;">
+        <div style="background: var(--teal); color: #fff; width: 48px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; border-radius: 4px 0 0 4px;">4</div>
+        <div style="background: #fff; padding: 16px 20px; flex: 1; border-radius: 0 4px 4px 0; border: 1px solid #eee;">
+          <strong>One-Click Documentation</strong>
+          <p style="font-size: 12px; color: #888; margin-top: 4px;">Care manager reviews, approves, and files — all within MedHOK. Zero after-call work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 12: FLORENCE + CARENET ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2 style="font-size: 28px;">Florence + CareNet: Complementary, Not Competitive</h2>
+    <div style="display: flex; gap: 24px; margin-top: 24px;">
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--teal); color: #fff; padding: 12px; text-align: center; font-weight: 700;">Florence — Outbound Proactive</div>
+        <div style="background: #EDF7F7; padding: 20px;">
+          <ul class="clean">
+            <li>Proactive member engagement</li>
+            <li>HEDIS gap closure campaigns</li>
+            <li>TCM post-discharge outreach</li>
+            <li>Rising risk interventions</li>
+            <li>Auto-documentation to MedHOK</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--red); color: #fff; padding: 12px; text-align: center; font-weight: 700;">CareNet — Inbound Triage</div>
+        <div style="background: #FFF5F5; padding: 20px;">
+          <ul class="clean">
+            <li>Nurse triage line (24/7)</li>
+            <li>Inbound clinical escalations</li>
+            <li>Urgent symptom assessment</li>
+            <li>ER diversion decisions</li>
+            <li>Provider-on-call coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="background: var(--light); padding: 16px 24px; border-radius: 4px; margin-top: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+      <h3 style="font-size: 14px;">Escalation Flow</h3>
+      <p style="font-size: 12px; color: #666; margin-top: 6px;">Florence conducts outreach → Identifies urgent clinical need → Warm-transfers to CareNet nurse → CareNet resolves → Florence follows up post-resolution → All documented in MedHOK</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 13: CONNECTIVE TISSUE ══════════════════════════════════════ -->
+<div class="slide" style="background: var(--dark-bg);">
+  <div class="accent-top"></div>
+  <div style="padding: 36px 64px;">
+    <h2 style="color: #fff; font-size: 28px;">Florence as Connective Tissue</h2>
+    <p style="color: var(--teal); font-size: 14px; font-style: italic; margin-top: 4px;">Florence doesn't replace your investments — she activates them</p>
+    <div style="position: relative; height: 480px; margin-top: 16px;">
+      <!-- Central Florence hub -->
+      <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 160px; height: 100px; background: var(--teal); border-radius: 50px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(85,181,184,0.4); z-index: 2;">
+        <img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt="" style="height: 28px;">
+        <span style="color: #fff; font-weight: 700; font-size: 14px; margin-top: 4px;">Florence</span>
+      </div>
+      <!-- Surrounding vendors -->
+      <div style="position: absolute; left: 80px; top: 20px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">KenSci</div>
+        <div style="color: #aaa; font-size: 10px;">Risk Scores</div>
+      </div>
+      <div style="position: absolute; left: 420px; top: 20px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">Cresta</div>
+        <div style="color: #aaa; font-size: 10px;">Inbound AI</div>
+      </div>
+      <div style="position: absolute; right: 80px; top: 20px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">MedHOK</div>
+        <div style="color: #aaa; font-size: 10px;">Documentation Hub</div>
+      </div>
+      <div style="position: absolute; right: 40px; top: 180px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">CareNet</div>
+        <div style="color: #aaa; font-size: 10px;">Nurse Triage</div>
+      </div>
+      <div style="position: absolute; right: 80px; bottom: 80px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">Arine</div>
+        <div style="color: #aaa; font-size: 10px;">MTM</div>
+      </div>
+      <div style="position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%); background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">SafeRide</div>
+        <div style="color: #aaa; font-size: 10px;">Transport</div>
+      </div>
+      <div style="position: absolute; left: 80px; bottom: 80px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">Dina</div>
+        <div style="color: #aaa; font-size: 10px;">Home Care</div>
+      </div>
+      <div style="position: absolute; left: 40px; top: 180px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">League</div>
+        <div style="color: #aaa; font-size: 10px;">Mobile</div>
+      </div>
+      <div style="position: absolute; left: 240px; bottom: 40px; background: #3A4A56; padding: 10px 16px; border-radius: 4px; text-align: center;">
+        <div style="color: #fff; font-weight: 700; font-size: 12px;">IAH</div>
+        <div style="color: #aaa; font-size: 10px;">SDOH Services</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 14: INTEGRATION TIERS ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2 style="font-size: 28px;">Flexible Integration: Meets Your IPAs Where They Are</h2>
+    <div style="margin-top: 24px;">
+      <div style="display: flex; align-items: stretch; margin-bottom: 10px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+        <div style="background: #E8F4F4; padding: 16px; width: 100%; display: flex; align-items: center; gap: 16px;">
+          <span style="font-weight: 700; color: var(--teal); min-width: 60px;">Tier 1</span>
+          <span style="font-weight: 700; min-width: 160px;">Outreach-Only</span>
+          <span style="font-size: 12px; color: #666;">Florence engages members via SMS/voice. Results reported to IPA. No EHR access needed.</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: stretch; margin-bottom: 10px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+        <div style="background: #D4ECEC; padding: 16px; width: 100%; display: flex; align-items: center; gap: 16px;">
+          <span style="font-weight: 700; color: var(--teal); min-width: 60px;">Tier 2</span>
+          <span style="font-weight: 700; min-width: 160px;">Read-Only</span>
+          <span style="font-size: 12px; color: #666;">Florence reads member data from FHIR/InterSystems IRIS. Personalizes outreach. No writes.</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: stretch; margin-bottom: 10px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+        <div style="background: #C0E4E4; padding: 16px; width: 100%; display: flex; align-items: center; gap: 16px;">
+          <span style="font-weight: 700; color: var(--teal-dark); min-width: 60px;">Tier 3</span>
+          <span style="font-weight: 700; min-width: 160px;">Draft/Staging</span>
+          <span style="font-size: 12px; color: #555;">Florence drafts documentation in MedHOK. Care manager reviews and approves before filing.</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: stretch; margin-bottom: 10px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+        <div style="background: var(--teal); padding: 16px; width: 100%; display: flex; align-items: center; gap: 16px;">
+          <span style="font-weight: 700; color: #fff; min-width: 60px;">Tier 4</span>
+          <span style="font-weight: 700; color: #fff; min-width: 160px;">Full Bidirectional</span>
+          <span style="font-size: 12px; color: rgba(255,255,255,0.85);">Florence reads, writes, and auto-files. Full MedHOK integration. Maximum efficiency.</span>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; font-size: 12px; color: #999; margin-top: 20px;">FHIR via InterSystems IRIS &nbsp;|&nbsp; Supports SCAN's delegated IPA model</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 15: KPI DASHBOARD ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>KPI Dashboard: What We'll Track Together</h2>
+    <p class="subtitle">Specific metrics Jenny requested — built into every Florence campaign</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px;">
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <div style="margin-left: 12px;">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-primary);">HEDIS Gap Closure Rate</div>
+          <div style="font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: var(--teal); margin-top: 4px;">15-25% improvement</div>
+          <div style="font-size: 10px; color: #999; margin-top: 4px;">Per measure, per campaign, by IPA</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--red);"></div>
+        <div style="margin-left: 12px;">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Readmission Reduction</div>
+          <div style="font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: var(--red); margin-top: 4px;">10-15% reduction</div>
+          <div style="font-size: 10px; color: #999; margin-top: 4px;">All-cause 30-day, by provider group</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--yellow);"></div>
+        <div style="margin-left: 12px;">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Utilization Redirect</div>
+          <div style="font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: #D4A017; margin-top: 4px;">20%+ ER diversion</div>
+          <div style="font-size: 10px; color: #999; margin-top: 4px;">ER/urgent care visits redirected to PCP</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <div style="margin-left: 12px;">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Engagement Rate</div>
+          <div style="font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: var(--teal); margin-top: 4px;">60-70% contact rate</div>
+          <div style="font-size: 10px; color: #999; margin-top: 4px;">By channel: SMS, voice, chat</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--red);"></div>
+        <div style="margin-left: 12px;">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-primary);">TCM Timeliness</div>
+          <div style="font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: var(--red); margin-top: 4px;">90%+ within 2 days</div>
+          <div style="font-size: 10px; color: #999; margin-top: 4px;">Post-discharge contact + PCP follow-up</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 20px;"><div class="card-accent-left" style="background: var(--teal-dark);"></div>
+        <div style="margin-left: 12px;">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Rising Risk Intervention</div>
+          <div style="font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: var(--teal-dark); margin-top: 4px;">Track per cohort</div>
+          <div style="font-size: 10px; color: #999; margin-top: 4px;">Members engaged before acute event</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 16: AUDIT & COMPLIANCE ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Audit-Ready Reporting &amp; Compliance</h2>
+    <div style="margin-top: 24px;">
+      <div style="display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: var(--light); border-left: 5px solid var(--teal); border-radius: 4px; margin-bottom: 12px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--teal)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <div><strong>Campaign Dashboards</strong><br><span style="font-size: 12px; color: #888;">Real-time visibility into every outreach campaign — contacts attempted, completed, outcomes by measure and IPA.</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: #fff; border-left: 5px solid var(--teal); border-radius: 4px; margin-bottom: 12px; border: 1px solid #eee;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--teal)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <div><strong>Member-Level Logs</strong><br><span style="font-size: 12px; color: #888;">Full audit trail for every member interaction — timestamped, transcribed, with clinical signals flagged.</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: var(--light); border-left: 5px solid var(--teal); border-radius: 4px; margin-bottom: 12px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--teal)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <div><strong>HEDIS Export Reports</strong><br><span style="font-size: 12px; color: #888;">Pre-formatted reports aligned to NCQA HEDIS specifications for annual submission.</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: #fff; border-left: 5px solid var(--teal); border-radius: 4px; border: 1px solid #eee;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--teal)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <div><strong>HIPAA Compliant</strong><br><span style="font-size: 12px; color: #888;">BAA-ready, encrypted at rest and in transit. HITRUST certification in progress.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 17: FINANCIAL CASE ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>The Financial Case for Florence</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 28px;">
+      <div class="card" style="padding: 24px;"><div class="card-accent-left" style="background: var(--teal);"></div>
+        <div style="margin-left: 12px;">
+          <div class="stat-number" style="color: var(--teal); font-size: 36px;">$30M+</div>
+          <div style="font-weight: 700; margin-top: 4px;">Estimated Annual Impact</div>
+          <div style="font-size: 12px; color: #888; margin-top: 4px;">Readmission savings + Star rating uplift + workforce efficiency</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 24px;"><div class="card-accent-left" style="background: var(--green);"></div>
+        <div style="margin-left: 12px;">
+          <div class="stat-number" style="color: var(--green); font-size: 36px;">4-6x</div>
+          <div style="font-weight: 700; margin-top: 4px;">Return on Investment</div>
+          <div style="font-size: 12px; color: #888; margin-top: 4px;">Conservative estimate based on gap closure + readmission reduction</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 24px;"><div class="card-accent-left" style="background: var(--yellow);"></div>
+        <div style="margin-left: 12px;">
+          <div class="stat-number" style="color: #D4A017; font-size: 36px;">0.5-1.0</div>
+          <div style="font-weight: 700; margin-top: 4px;">Star Rating Improvement</div>
+          <div style="font-size: 12px; color: #888; margin-top: 4px;">Member experience + HEDIS closure + medication adherence</div>
+        </div>
+      </div>
+      <div class="card" style="padding: 24px;"><div class="card-accent-left" style="background: var(--red);"></div>
+        <div style="margin-left: 12px;">
+          <div class="stat-number" style="color: var(--red); font-size: 36px;">3x</div>
+          <div style="font-weight: 700; margin-top: 4px;">Care Manager Capacity</div>
+          <div style="font-size: 12px; color: #888; margin-top: 4px;">Each CM manages 3x the panel with Florence co-pilot support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 18: PRICING ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Performance-Based Pricing</h2>
+    <p class="subtitle">We succeed when SCAN succeeds</p>
+    <div style="display: flex; gap: 20px; margin-top: 24px;">
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--teal); color: #fff; padding: 14px; text-align: center; font-weight: 700; font-size: 16px;">Base PMPM</div>
+        <div style="padding: 20px; background: var(--light);">
+          <p style="font-size: 12px; color: #666;">Platform access fee for Florence infrastructure, member data integration, and MedHOK automation.</p>
+        </div>
+      </div>
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--yellow); color: #fff; padding: 14px; text-align: center; font-weight: 700; font-size: 16px;">Per-Episode Fees</div>
+        <div style="padding: 20px; background: var(--light);">
+          <p style="font-size: 12px; color: #666;">TCM outreach, HEDIS campaign engagement, appointment scheduling. Pay only for completed episodes.</p>
+        </div>
+      </div>
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--green); color: #fff; padding: 14px; text-align: center; font-weight: 700; font-size: 16px;">Performance Escalators</div>
+        <div style="padding: 20px; background: var(--light);">
+          <p style="font-size: 12px; color: #666;">Bonus payments for exceeding KPI benchmarks. Penalties for missing targets. Shared risk/reward.</p>
+        </div>
+      </div>
+    </div>
+    <div style="background: #FFF5F0; border-left: 5px solid var(--red); padding: 16px 24px; border-radius: 4px; margin-top: 24px;">
+      <strong style="color: var(--red);">"No measures closed, no payment."</strong>
+      <span style="font-size: 12px; color: #666;"> CCDA chart pulls: $3.50 per pull. All pricing transparent, audit-ready, and aligned to SCAN outcomes.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 19: ROADMAP ══════════════════════════════════════ -->
+<div class="slide">
+  <div class="accent-left"></div>
+  <div class="footer"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/shield-only.png" alt=""><span>NightingaleMD &nbsp;|&nbsp; Florence for SCAN Health Plan &nbsp;|&nbsp; Confidential</span></div>
+  <div style="padding: 48px 64px;">
+    <h2>Our Shared Roadmap</h2>
+    <div style="display: flex; gap: 20px; margin-top: 24px;">
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--teal); color: #fff; padding: 8px 16px;">
+          <div style="font-size: 11px; opacity: 0.8;">Phase 1</div>
+          <div style="font-weight: 700; font-size: 16px;">Foundation</div>
+        </div>
+        <div style="padding: 16px; background: var(--light);">
+          <div style="font-weight: 700; font-size: 12px; color: var(--text-primary); margin-bottom: 8px;">Months 1–3</div>
+          <ul class="clean">
+            <li>MedHOK integration setup</li>
+            <li>Data feed config (Databricks/FHIR)</li>
+            <li>Pilot with 1 IPA (5-10K members)</li>
+            <li>Care protocol training</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--yellow); color: #fff; padding: 8px 16px;">
+          <div style="font-size: 11px; opacity: 0.8;">Phase 2</div>
+          <div style="font-weight: 700; font-size: 16px;">Expansion</div>
+        </div>
+        <div style="padding: 16px; background: var(--light);">
+          <div style="font-weight: 700; font-size: 12px; color: var(--text-primary); margin-bottom: 8px;">Months 4–6</div>
+          <ul class="clean">
+            <li>Care Manager Co-Pilot launch</li>
+            <li>CareNet integration</li>
+            <li>Expand to 3 additional IPAs</li>
+            <li>Homebase &amp; Welcome Health</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex: 1; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: var(--red); color: #fff; padding: 8px 16px;">
+          <div style="font-size: 11px; opacity: 0.8;">Phase 3</div>
+          <div style="font-weight: 700; font-size: 16px;">Full Network</div>
+        </div>
+        <div style="padding: 16px; background: var(--light);">
+          <div style="font-weight: 700; font-size: 12px; color: var(--text-primary); margin-bottom: 8px;">Months 7–12</div>
+          <ul class="clean">
+            <li>Full network rollout (30+ IPAs)</li>
+            <li>Rising risk programs</li>
+            <li>Advanced analytics dashboard</li>
+            <li>Performance review &amp; optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ SLIDE 20: NEXT STEPS ══════════════════════════════════════ -->
+<div class="slide" style="background: var(--dark-bg);">
+  <div class="accent-top"></div>
+  <div style="padding: 48px 64px;">
+    <img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/full-logo.png" alt="NightingaleMD" style="height: 40px; margin-bottom: 24px;">
+    <h1 style="color: #fff; font-size: 36px;">Next Steps</h1>
+    <div style="width: 160px; height: 3px; background: var(--teal); margin: 20px 0;"></div>
+    <div style="margin-top: 16px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <span style="background: var(--teal); color: #fff; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+        <span style="color: #fff; font-size: 15px;">Send this deck + custom solution design to CJ and Jenny</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <span style="background: var(--teal); color: #fff; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+        <span style="color: #fff; font-size: 15px;">Schedule deeper Florence demo with SCAN care management team</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <span style="background: var(--teal); color: #fff; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+        <span style="color: #fff; font-size: 15px;">Meet CEO Sachin Jain at APG Conference (May 2026, San Diego)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <span style="background: var(--teal); color: #fff; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 700;">4</span>
+        <span style="color: #fff; font-size: 15px;">NightingaleMD executive roundtable dinner at APG — SCAN CEO invited</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="background: var(--teal); color: #fff; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 700;">5</span>
+        <span style="color: #fff; font-size: 15px;">Define pilot IPA and success criteria</span>
+      </div>
+    </div>
+    <div style="position: absolute; bottom: 24px; left: 64px; right: 64px; border-top: 1px solid #444; padding-top: 12px;">
+      <span style="color: #999; font-size: 12px;">Omar Salah &nbsp;|&nbsp; CEO, NightingaleMD &nbsp;|&nbsp; omar@mdportals.com</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
