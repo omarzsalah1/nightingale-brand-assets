@@ -138,12 +138,12 @@
         }
 
         .kpi-tile {
-            background: linear-gradient(135deg, #55B5B8 0%, #4A9FA2 100%);
+            background: linear-gradient(135deg, #3D9B9E 0%, #358C8F 100%);
             padding: 25px;
             border-radius: 8px;
             color: white;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(85, 181, 184, 0.2);
+            box-shadow: 0 4px 12px rgba(61, 155, 158, 0.2);
         }
 
         .kpi-tile .number {
@@ -735,6 +735,19 @@
             text-align: center;
         }
 
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         /* Citation Style */
         .cite {
             font-size: 12px;
@@ -875,15 +888,15 @@
         <div class="slide-content">
             <div class="pressure-grid">
                 <div class="pressure-column">
-                    <h3><i class="fas fa-shield-alt"></i> Competitive Pressure</h3>
+                    <h3><i aria-hidden="true" class="fas fa-shield-alt"></i> Competitive Pressure</h3>
                     <p>Signify Health acquired by CVS<span class="cite">[9]</span> ($8B). Optum HouseCalls has UHG's captive membership. Both have data infrastructure advantages.</p>
                 </div>
                 <div class="pressure-column">
-                    <h3><i class="fas fa-gavel"></i> Regulatory Threat</h3>
+                    <h3><i aria-hidden="true" class="fas fa-gavel"></i> Regulatory Threat</h3>
                     <p>OIG flagged $7.5B<span class="cite">[1]</span> in MA payments tied to HRAs with no follow-up care. CMS proposing to exclude "unlinked" diagnoses from risk scores.</p>
                 </div>
                 <div class="pressure-column">
-                    <h3><i class="fas fa-exclamation-circle"></i> Operational Strain</h3>
+                    <h3><i aria-hidden="true" class="fas fa-exclamation-circle"></i> Operational Strain</h3>
                     <p>Clinician shortage worsening (8,467 HPSAs<span class="cite">[2]</span> in 2025). 20-30% no-show rates<span class="cite">[3]</span>. Documentation burden driving NP turnover.</p>
                 </div>
             </div>
@@ -929,35 +942,35 @@
                     <div class="number">1</div>
                     <div class="label">Member List</div>
                     <div class="pain">
-                        <i class="fas fa-check"></i> Health plan sends target members
+                        <i aria-hidden="true" class="fas fa-check"></i> Health plan sends target members
                     </div>
                 </div>
                 <div class="process-step">
                     <div class="number">2</div>
                     <div class="label">Schedule</div>
                     <div class="pain">
-                        <i class="fas fa-times"></i> 20-30% no-shows
+                        <i aria-hidden="true" class="fas fa-times"></i> 20-30% no-shows
                     </div>
                 </div>
                 <div class="process-step">
                     <div class="number">3</div>
                     <div class="label">In-Home Visit</div>
                     <div class="pain">
-                        <i class="fas fa-times"></i> Rigid tablet EMR
+                        <i aria-hidden="true" class="fas fa-times"></i> Rigid tablet EMR
                     </div>
                 </div>
                 <div class="process-step">
                     <div class="number">4</div>
                     <div class="label">Document</div>
                     <div class="pain">
-                        <i class="fas fa-times"></i> 35% time on docs
+                        <i aria-hidden="true" class="fas fa-times"></i> 35% time on docs
                     </div>
                 </div>
                 <div class="process-step">
                     <div class="number">5</div>
                     <div class="label">Data Sync</div>
                     <div class="pain">
-                        <i class="fas fa-times"></i> Data black hole
+                        <i aria-hidden="true" class="fas fa-times"></i> Data black hole
                     </div>
                 </div>
             </div>
@@ -979,21 +992,21 @@
         <div class="slide-content">
             <div class="two-column">
                 <div class="column-left">
-                    <h3><i class="fas fa-phone-alt"></i> How It Works</h3>
+                    <h3><i aria-hidden="true" class="fas fa-phone-alt"></i> How It Works</h3>
                     <p>AI voice agent handles outbound member calls, books appointments, confirms, and reschedules with intelligence.</p>
                     <div class="impact-callout">
                         <strong>25+ languages</strong> • <strong>24/7 availability</strong> • <strong>Smart routing logic</strong>
                     </div>
                 </div>
                 <div class="column-right">
-                    <h3><i class="fas fa-chart-line"></i> Impact</h3>
+                    <h3><i aria-hidden="true" class="fas fa-chart-line"></i> Impact</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                         <div class="kpi-tile" style="font-size: 11px; padding: 15px;">
                             <div class="number" style="font-size: 28px;">35-40%<span class="cite" style="font-size: 10px;">[4]</span></div>
                             <div class="label">No-Show Reduction</div>
                         </div>
                         <div class="kpi-tile" style="font-size: 11px; padding: 15px;">
-                            <div class="number" style="font-size: 28px;">60%<span class="cite" style="font-size: 10px;">[4-cite]</span></div>
+                            <div class="number" style="font-size: 28px;">60%<span class="cite" style="font-size: 10px;">[4]</span></div>
                             <div class="label">Cost Per Appt</div>
                         </div>
                     </div>
@@ -1019,11 +1032,11 @@
         </div>
         <div class="slide-content">
             <div class="data-flow">
-                <div class="data-source"><i class="fas fa-file-contract"></i><br>Claims Data</div>
-                <div class="data-source"><i class="fas fa-stethoscope"></i><br>PCP Medical Records</div>
-                <div class="data-source"><i class="fas fa-history"></i><br>Prior HRAs</div>
-                <div class="data-source"><i class="fas fa-vial"></i><br>Lab Results</div>
-                <div class="data-source"><i class="fas fa-prescription-bottle"></i><br>Medications</div>
+                <div class="data-source"><i aria-hidden="true" class="fas fa-file-contract"></i><br>Claims Data</div>
+                <div class="data-source"><i aria-hidden="true" class="fas fa-stethoscope"></i><br>PCP Medical Records</div>
+                <div class="data-source"><i aria-hidden="true" class="fas fa-history"></i><br>Prior HRAs</div>
+                <div class="data-source"><i aria-hidden="true" class="fas fa-vial"></i><br>Lab Results</div>
+                <div class="data-source"><i aria-hidden="true" class="fas fa-prescription-bottle"></i><br>Medications</div>
             </div>
             <div class="regulatory-alert">
                 <strong>KEY DIFFERENTIATOR:</strong> Matrix clinicians today work from claims data alone. Florence gives them the complete clinical picture—enabling smarter assessments and more accurate coding.
@@ -1050,7 +1063,7 @@
                 </div>
                 <div class="workflow-box">
                     <div class="workflow-step">
-                        <div class="step-number"><i class="fas fa-headphones"></i></div>
+                        <div class="step-number"><i aria-hidden="true" class="fas fa-headphones"></i></div>
                         <div class="step-content">
                             <div class="step-title">Ambient Listening</div>
                             <div class="step-desc">Florence listens to the encounter via the browser, identifies clinical entities, and maps to ICD-10/HCC codes in real time.</div>
@@ -1059,7 +1072,7 @@
                 </div>
                 <div class="workflow-box">
                     <div class="workflow-step">
-                        <div class="step-number"><i class="fas fa-lightbulb"></i></div>
+                        <div class="step-number"><i aria-hidden="true" class="fas fa-lightbulb"></i></div>
                         <div class="step-content">
                             <div class="step-title">Intelligent Prompting</div>
                             <div class="step-desc">"Patient mentions blurred vision + diabetes → Florence prompts: 'Consider E11.311—Diabetic retinopathy. Last dilated exam: none. A1c: 9.2.'"</div>
@@ -1068,7 +1081,7 @@
                 </div>
                 <div class="workflow-box">
                     <div class="workflow-step">
-                        <div class="step-number"><i class="fas fa-database"></i></div>
+                        <div class="step-number"><i aria-hidden="true" class="fas fa-database"></i></div>
                         <div class="step-content">
                             <div class="step-title">Longitudinal Querying</div>
                             <div class="step-desc">Florence cross-references the full record and nudges: "Patient has CHF documented in 2023 cardiology notes but no HCC captured this year."</div>
@@ -1177,18 +1190,18 @@
         <div class="slide-content">
             <div style="display: flex; flex-direction: column; gap: 20px;">
                 <div class="arch-box">
-                    <div class="label"><i class="fas fa-arrows-alt-h"></i> ZERO-TOUCH DATA BRIDGE</div>
+                    <div class="label"><i aria-hidden="true" class="fas fa-arrows-alt-h"></i> ZERO-TOUCH DATA BRIDGE</div>
                     Matrix Platform <strong>→</strong> Florence EHR Bridge <strong>→</strong> Provider's Native EHR (Epic, Athena, eCW, NextGen, DrChrono)
                 </div>
                 <div style="background: white; padding: 20px; border: 2px solid #E0E0E0; border-radius: 6px;">
                     <p style="font-size: 13px; line-height: 1.6; color: #31393F; margin-bottom: 12px;">
-                        <i class="fas fa-check" style="color: #55B5B8; margin-right: 8px;"></i> <strong>No HL7 or FHIR integration required.</strong> No 6-month integration project.
+                        <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; margin-right: 8px;"></i> <strong>No HL7 or FHIR integration required.</strong> No 6-month integration project.
                     </p>
                     <p style="font-size: 13px; line-height: 1.6; color: #31393F; margin-bottom: 12px;">
-                        <i class="fas fa-check" style="color: #55B5B8; margin-right: 8px;"></i> <strong>Vision-Language-Action models</strong> read the EHR UI and write data directly.
+                        <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; margin-right: 8px;"></i> <strong>Vision-Language-Action models</strong> read the EHR UI and write data directly.
                     </p>
                     <p style="font-size: 13px; line-height: 1.6; color: #31393F;">
-                        <i class="fas fa-check" style="color: #55B5B8; margin-right: 8px;"></i> <strong>Compatible with major web-based EHRs</strong> on Day 1. No API keys. No backend integration.
+                        <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; margin-right: 8px;"></i> <strong>Compatible with major web-based EHRs</strong> on Day 1. No API keys. No backend integration.
                     </p>
                 </div>
             </div>
@@ -1259,21 +1272,21 @@
         <div class="slide-content">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
                 <div class="arch-box">
-                    <div class="label"><i class="fas fa-clinic-medical"></i> Front-End (Florence)</div>
+                    <div class="label"><i aria-hidden="true" class="fas fa-clinic-medical"></i> Front-End (Florence)</div>
                     Real-time ambient capture → Longitudinal querying → HCC prompting → Auto-documentation → EHR Bridge
                 </div>
                 <div class="arch-box">
-                    <div class="label"><i class="fas fa-brain"></i> Back-End (ECLAT evaire<span class="cite" style="font-size: 10px;">[10]</span>)</div>
+                    <div class="label"><i aria-hidden="true" class="fas fa-brain"></i> Back-End (ECLAT evaire<span class="cite" style="font-size: 10px;">[10]</span>)</div>
                     Concurrent & retrospective NLP coding → Compliance validation → RAF optimization
                 </div>
             </div>
             <div style="margin-top: 25px; padding: 20px; background: white; border-left: 5px solid #F8CA44; border-radius: 4px;">
                 <p style="font-size: 13px; line-height: 1.6; color: #31393F;">
-                    <i class="fas fa-arrow-right" style="color: #F8CA44; margin-right: 10px;"></i>
+                    <i aria-hidden="true" class="fas fa-arrow-right" style="color: #F8CA44; margin-right: 10px;"></i>
                     <strong>Florence feeds ECLAT—</strong>comprehensive data in, better coding out.
                 </p>
                 <p style="font-size: 13px; line-height: 1.6; color: #31393F; margin-top: 10px;">
-                    <i class="fas fa-check" style="color: #55B5B8; margin-right: 10px;"></i>
+                    <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; margin-right: 10px;"></i>
                     <strong>Industry's first end-to-end AI-powered HRA.</strong> No vendor does this today.
                 </p>
             </div>
@@ -1299,7 +1312,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
                 <div>
                     <h3 style="font-family: 'Merriweather', serif; font-size: 16px; color: #55B5B8; font-weight: 700; margin-bottom: 15px;">
-                        <i class="fas fa-cloud"></i> Browser-Native AI Platform
+                        <i aria-hidden="true" class="fas fa-cloud"></i> Browser-Native AI Platform
                     </h3>
                     <ul style="font-size: 13px; line-height: 1.7; color: #31393F; margin-left: 20px;">
                         <li>Browser extension on clinician's tablet</li>
@@ -1310,7 +1323,7 @@
                 </div>
                 <div>
                     <h3 style="font-family: 'Merriweather', serif; font-size: 16px; color: #55B5B8; font-weight: 700; margin-bottom: 15px;">
-                        <i class="fas fa-rocket"></i> Key Advantages
+                        <i aria-hidden="true" class="fas fa-rocket"></i> Key Advantages
                     </h3>
                     <ul style="font-size: 13px; line-height: 1.7; color: #31393F; margin-left: 20px;">
                         <li>Deploy to clinicians in minutes</li>
@@ -1339,28 +1352,28 @@
         <div class="slide-content">
             <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
                 <div style="display: flex; align-items: center; padding: 15px; background: #F2F3F4; border-radius: 6px; border-left: 5px solid #55B5B8;">
-                    <i class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
+                    <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
                     <div style="flex: 1;">
                         <strong style="color: #31393F;">Matrix's proprietary tablet EMR</strong>
                         <p style="font-size: 12px; color: #5A6872; margin-top: 3px;">Florence layers on top seamlessly</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; padding: 15px; background: #F2F3F4; border-radius: 6px; border-left: 5px solid #55B5B8;">
-                    <i class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
+                    <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
                     <div style="flex: 1;">
                         <strong style="color: #31393F;">Carenet Health scheduling<span class="cite" style="font-size: 10px;">[8]</span></strong>
                         <p style="font-size: 12px; color: #5A6872; margin-top: 3px;">Or Florence can replace it entirely</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; padding: 15px; background: #F2F3F4; border-radius: 6px; border-left: 5px solid #55B5B8;">
-                    <i class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
+                    <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
                     <div style="flex: 1;">
                         <strong style="color: #31393F;">ECLAT evaire coding platform</strong>
                         <p style="font-size: 12px; color: #5A6872; margin-top: 3px;">Florence enriches the input data</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; padding: 15px; background: #F2F3F4; border-radius: 6px; border-left: 5px solid #55B5B8;">
-                    <i class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
+                    <i aria-hidden="true" class="fas fa-check" style="color: #55B5B8; font-size: 20px; margin-right: 15px;"></i>
                     <div style="flex: 1;">
                         <strong style="color: #31393F;">Tableau & SQL Server analytics</strong>
                         <p style="font-size: 12px; color: #5A6872; margin-top: 3px;">All existing dashboards work better</p>
@@ -1402,52 +1415,52 @@
                 <tbody>
                     <tr>
                         <td><strong>AI Copilot in the Room</strong></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
                     </tr>
                     <tr>
                         <td><strong>Real-Time HCC Prompting</strong></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
                     </tr>
                     <tr>
                         <td><strong>Auto-Documentation</strong></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
                     </tr>
                     <tr>
                         <td><strong>Longitudinal Record Access</strong></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="partial">◐</span></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="partial" role="img" aria-label="Partial">◐</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
                     </tr>
                     <tr>
                         <td><strong>EHR Bridge to PCP</strong></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
                     </tr>
                     <tr>
                         <td><strong>PCP Handoff + Follow-Up</strong></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗</span></td>
                     </tr>
                     <tr>
                         <td><strong>Independent (No Payer Conflict)</strong></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗ (CVS/Aetna)</span></td>
-                        <td style="text-align: center;"><span class="xmark">✗ (UHG)</span></td>
-                        <td style="text-align: center;"><span class="checkmark">✓</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗ (CVS/Aetna)</span></td>
+                        <td style="text-align: center;"><span class="xmark" role="img" aria-label="No">✗ (UHG)</span></td>
+                        <td style="text-align: center;"><span class="checkmark" role="img" aria-label="Yes">✓</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -1519,27 +1532,27 @@
         <div class="slide-content">
             <div class="security-grid">
                 <div class="security-item">
-                    <div class="icon"><i class="fas fa-lock"></i></div>
+                    <div class="icon"><i aria-hidden="true" class="fas fa-lock"></i></div>
                     <div class="label">HIPAA Compliant</div>
                 </div>
                 <div class="security-item">
-                    <div class="icon"><i class="fas fa-certificate"></i></div>
+                    <div class="icon"><i aria-hidden="true" class="fas fa-certificate"></i></div>
                     <div class="label">SOC 2 Type II</div>
                 </div>
                 <div class="security-item">
-                    <div class="icon"><i class="fas fa-ban"></i></div>
+                    <div class="icon"><i aria-hidden="true" class="fas fa-ban"></i></div>
                     <div class="label">No Long-Term PHI Storage</div>
                 </div>
                 <div class="security-item">
-                    <div class="icon"><i class="fas fa-user-secret"></i></div>
+                    <div class="icon"><i aria-hidden="true" class="fas fa-user-secret"></i></div>
                     <div class="label">Edge-Based PII Redaction</div>
                 </div>
                 <div class="security-item">
-                    <div class="icon"><i class="fas fa-database"></i></div>
+                    <div class="icon"><i aria-hidden="true" class="fas fa-database"></i></div>
                     <div class="label">Matrix = System of Record</div>
                 </div>
                 <div class="security-item">
-                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <div class="icon"><i aria-hidden="true" class="fas fa-handshake"></i></div>
                     <div class="label">BAA Available</div>
                 </div>
             </div>
@@ -1564,7 +1577,7 @@
         <div class="slide-content">
             <div class="pilot-grid">
                 <div class="pilot-box">
-                    <div class="label"><i class="fas fa-target"></i> Scope</div>
+                    <div class="label"><i aria-hidden="true" class="fas fa-target"></i> Scope</div>
                     <div class="content">
                         50 clinicians<br>
                         One market<br>
@@ -1572,7 +1585,7 @@
                     </div>
                 </div>
                 <div class="pilot-box">
-                    <div class="label"><i class="fas fa-hourglass-half"></i> Duration</div>
+                    <div class="label"><i aria-hidden="true" class="fas fa-hourglass-half"></i> Duration</div>
                     <div class="content">
                         90 days<br>
                         Live feedback<br>
@@ -1580,7 +1593,7 @@
                     </div>
                 </div>
                 <div class="pilot-box">
-                    <div class="label"><i class="fas fa-chart-pie"></i> Success Metrics</div>
+                    <div class="label"><i aria-hidden="true" class="fas fa-chart-pie"></i> Success Metrics</div>
                     <div class="content">
                         HCC capture rate<br>
                         Documentation time/visit<br>
@@ -1590,19 +1603,19 @@
             </div>
             <div style="margin-top: 25px;">
                 <h3 style="font-family: 'Merriweather', serif; font-size: 16px; color: #55B5B8; font-weight: 700; margin-bottom: 15px;">
-                    <i class="fas fa-calendar-alt"></i> Timeline
+                    <i aria-hidden="true" class="fas fa-calendar-alt"></i> Timeline
                 </h3>
                 <div class="icon-row">
                     <div class="icon-box">
-                        <div class="icon"><i class="fas fa-cogs"></i></div>
+                        <div class="icon"><i aria-hidden="true" class="fas fa-cogs"></i></div>
                         <div class="label">Week 1-2<br>Deployment</div>
                     </div>
                     <div class="icon-box">
-                        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="icon"><i aria-hidden="true" class="fas fa-graduation-cap"></i></div>
                         <div class="label">Week 3-4<br>Training</div>
                     </div>
                     <div class="icon-box">
-                        <div class="icon"><i class="fas fa-play-circle"></i></div>
+                        <div class="icon"><i aria-hidden="true" class="fas fa-play-circle"></i></div>
                         <div class="label">Week 5+<br>Live Mode</div>
                     </div>
                 </div>
@@ -1610,10 +1623,10 @@
             <div style="margin-top: 20px; background: #FFF4E0; border-left: 5px solid #F8CA44; padding: 18px 22px; border-radius: 4px;">
                 <h3 style="font-family: 'Merriweather', serif; font-size: 16px; color: #31393F; margin-bottom: 10px;">What We Need from Matrix</h3>
                 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; font-size: 14px; color: #31393F;">
-                    <div><i class="fas fa-user-tie" style="color: #55B5B8; margin-right: 6px;"></i><strong>Executive Sponsor</strong> — VP-level decision maker</div>
-                    <div><i class="fas fa-database" style="color: #55B5B8; margin-right: 6px;"></i><strong>Data Access</strong> — Sample patient panel for pilot</div>
-                    <div><i class="fas fa-shield-alt" style="color: #55B5B8; margin-right: 6px;"></i><strong>Security Review</strong> — IT team kickoff meeting</div>
-                    <div><i class="fas fa-calendar-check" style="color: #55B5B8; margin-right: 6px;"></i><strong>Pilot Market</strong> — 1-2 markets to launch</div>
+                    <div><i aria-hidden="true" class="fas fa-user-tie" style="color: #55B5B8; margin-right: 6px;"></i><strong>Executive Sponsor</strong> — VP-level decision maker</div>
+                    <div><i aria-hidden="true" class="fas fa-database" style="color: #55B5B8; margin-right: 6px;"></i><strong>Data Access</strong> — Sample patient panel for pilot</div>
+                    <div><i aria-hidden="true" class="fas fa-shield-alt" style="color: #55B5B8; margin-right: 6px;"></i><strong>Security Review</strong> — IT team kickoff meeting</div>
+                    <div><i aria-hidden="true" class="fas fa-calendar-check" style="color: #55B5B8; margin-right: 6px;"></i><strong>Pilot Market</strong> — 1-2 markets to launch</div>
                 </div>
             </div>
         </div>
