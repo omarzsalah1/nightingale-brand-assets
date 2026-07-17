@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<!-- NightingaleMD — CANONICAL LOGO LOCKUP (2026-07-16)
+     Shield (from the design skill) + Hanken Grotesk Light wordmark + "MD" in a Brand Red chip.
+     Reusable: set ONE knob (font-size on .nm-lockup) and the whole lockup scales; spacing is locked.
+     Copy the <style> block + a .nm-lockup element into any page. -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* ---- CANONICAL LOCKUP — copy this block ---- */
+  .nm-lockup{display:inline-flex;align-items:center;gap:.05em;line-height:1;
+    font-family:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;font-size:60px} /* size knob */
+  .nm-lockup img{height:1.72em;width:auto}
+  .nm-lockup .nm-wm{font-weight:300;letter-spacing:.005em;color:#31393F}          /* on light  */
+  .nm-lockup.on-dark .nm-wm{color:#EDEFF0}                                          /* on dark   */
+  .nm-lockup .nm-wm .md{font-weight:700;font-size:.76em;background:#E45740;color:#fff;
+    border-radius:.2em;padding:.05em .24em;margin-left:.16em;vertical-align:.06em}
+  /* ---- end canonical block ---- */
+
+  body{margin:0;font-family:'Hanken Grotesk',sans-serif;background:#2b3239;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;min-height:100vh}
+  .card{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .cap{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8A97A1}
+  .light{background:#FBFAF7;padding:34px 50px;border-radius:16px}
+</style></head>
+<body>
+  <div class="card">
+    <span class="nm-lockup on-dark"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/nightingale-icon-red.svg" alt="NightingaleMD"><span class="nm-wm">Nightingale<span class="md">MD</span></span></span>
+    <div class="cap">canonical lockup · on dark · font-size:60px</div>
+  </div>
+  <div class="card">
+    <div class="light"><span class="nm-lockup" style="font-size:34px"><img src="https://raw.githubusercontent.com/omarzsalah1/nightingale-brand-assets/main/logos/nightingale-icon-red.svg" alt="NightingaleMD"><span class="nm-wm">Nightingale<span class="md">MD</span></span></span></div>
+    <div class="cap">on paper white · font-size:34px</div>
+  </div>
+</body></html>
