@@ -16,6 +16,19 @@ Authoritative **2026-07-16**. Reconciled with the canonical NightingaleMD Design
 
 Placement: **Shield** bottom-right (~44px) on content slides; **full lockup** — or shield + a lettered "NightingaleMD" wordmark (Hanken Grotesk Light, "MD" in a red chip) — on title/closing. The mark is brand red `#E45740`; that is the one sanctioned heritage use of that hue. Never stretch, recolor, add effects, or place on a busy background.
 
+**Canonical wordmark lockup** (shield + Hanken Grotesk Light wordmark + "MD" in a Brand Red chip). Reference: `logos/nightingalemd-lockup.html`. Set one knob — `font-size` on `.nm-lockup` — and it scales; spacing is locked (wordmark clears the shield):
+```css
+.nm-lockup{display:inline-flex;align-items:center;gap:.05em;line-height:1;
+  font-family:'Hanken Grotesk','Helvetica Neue',sans-serif;font-size:60px}
+.nm-lockup img{height:1.72em}
+.nm-lockup .nm-wm{font-weight:300;letter-spacing:.005em;color:#31393F}   /* .on-dark -> #EDEFF0 */
+.nm-lockup .nm-wm .md{font-weight:700;font-size:.76em;background:#E45740;color:#fff;
+  border-radius:.2em;padding:.05em .24em;margin-left:.16em;vertical-align:.06em}
+```
+```html
+<span class="nm-lockup"><img src=".../logos/nightingale-icon-red.svg" alt="NightingaleMD"><span class="nm-wm">Nightingale<span class="md">MD</span></span></span>
+```
+
 ---
 
 ## COLORS — canonical palette
