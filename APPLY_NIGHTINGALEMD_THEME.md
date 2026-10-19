@@ -82,7 +82,7 @@ Placement: **Shield** bottom-right (~44px) on content slides; **full lockup** �
 - Content in 2–3 columns (avoid vertical stacking)
 - **Backgrounds:** Paper White `#FBFAF7` default; Ink `#222A2E` for covers/section dividers (subtle low-opacity teal/coral radial glows, never busy gradients)
 - **Cards:** Warm White `#FFFDFC`, 1px `#DDE2E5` border, 16px radius, soft cool shadow `0 2px 8px rgba(31,57,73,.08)`, optional 3px colored top rule
-- Footer: `© NightingaleMD 2026 | NightingaleMD.com` in Text Secondary, IBM Plex Mono
+- Footer: `© NightingaleMD 2026 | nightingale.md` in Text Secondary, IBM Plex Mono
 - Logo per placement rule above
 
 ---
